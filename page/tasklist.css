@@ -1,0 +1,26 @@
+.app__tasklist {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasklist__item {
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    flex-direction: column;
+}
+
+.tasklist__item-title {
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    height: fit-content;
+    margin: 0em 0;
+    border-bottom: 1px solid black;
+    z-index: 100;
+}
+
+.tasklist__item-title h4 {
+    margin: 0.4em 0;
+}

@@ -1,0 +1,6 @@
+.app__sidebar {
+    width: 30vw;
+    background-color: red;
+    height: 100vh;
+    float: left;
+}
