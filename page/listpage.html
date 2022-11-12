@@ -35,7 +35,32 @@
 
     </navbar>
     <div class="app__sidebar">
-        abcdef
+        <button class="dropdown-btn">
+            List 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Project name</a>
+            <a href="#">Testing</a>
+        </div>
+        <button class="dropdown-btn">Calendar 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Project name</a>
+            <a href="#">Testing</a>
+        </div>
+        <button class="dropdown-btn">Analyze 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Project name</a>
+            <a href="#">Testing</a>
+        </div>
+        <div class="sidebar__addtask">
+            +
+            New task
+        </div>
     </div>
     <div class="app__tasklist">
         <div class="tasklist__item app__tasklist-planning">
@@ -43,20 +68,130 @@
                 <h4>PLANNING</h4>
             </div>
             <div class="tasklist__item-task">
-                abc
+                <div class="task__info">
+                    <div class="task__title">
+                        Task 1
+                    </div>
+                    <div class="task__date">
+                        Start at: 23/03/27
+                    </div>
+                    <div class="task__note">
+                        Note: vudeptrai
+                    </div>
+                </div>
+                <div class="task__options">
+                    <div class="task__status">
+                        C
+                    </div>
+                    <div class="task__edit">
+                        A
+                    </div>
+                    <div class="task__delete">
+                        C
+                    </div>
+                </div>
+            </div>
+            <div class="tasklist__item-task">
+                <div class="task__info">
+                    <div class="task__title">
+                        Task 2
+                    </div>
+                    <div class="task__date">
+                        Start at: 27/06/27
+                    </div>
+                    <div class="task__note">
+                        Note: vudeptrai
+                    </div>
+                </div>
+                <div class="task__options">
+                    <div class="task__status">
+                        C
+                    </div>
+                    <div class="task__edit">
+                        A
+                    </div>
+                    <div class="task__delete">
+                        C
+                    </div>
+                </div>
             </div>
         </div>
         <div class="tasklist__item app__tasklist-uncompleted">
             <div class="tasklist__item-title">
                 <h4>UNCOMPLETED</h4>
             </div>
+            <div class="tasklist__item-task">
+                <div class="task__info">
+                    <div class="task__title">
+                        Task 1
+                    </div>
+                    <div class="task__date">
+                        Deadline: 20:45 23/06/27
+                    </div>
+                    <div class="task__note">
+                        Note: vudeptrai
+                    </div>
+                </div>
+                <div class="task__options">
+                    <div class="task__status">
+                        L
+                    </div>
+                    <div class="task__edit">
+                        O
+                    </div>
+                    <div class="task__delete">
+                        N
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="tasklist__item app__tasklist-completed">
             <div class="tasklist__item-title">
                 <h4>COMPLETED</h4>
             </div>
+            <div class="tasklist__item-task">
+                <div class="task__info">
+                    <div class="task__title">
+                        Task 1
+                    </div>
+                    <div class="task__date">
+                        Deadline: 20:45 23/06/27
+                    </div>
+                    <div class="task__note">
+                        Note: vudeptrai
+                    </div>
+                </div>
+                <div class="task__options">
+                    <div class="task__status">
+                        C
+                    </div>
+                    <div class="task__edit">
+                        A
+                    </div>
+                    <div class="task__delete">
+                        C
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+        
+        for (i = 0; i < dropdown.length; i++) {
+          dropdown[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var dropdownContent = this.nextElementSibling;
+            if (dropdownContent.style.display === "block") {
+              dropdownContent.style.display = "none";
+            } else {
+              dropdownContent.style.display = "block";
+            }
+          });
+        }
+        </script>
 
 </body>
 </html>

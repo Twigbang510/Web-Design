@@ -9,6 +9,7 @@
     width: 100%;
     border: 1px solid black;
     flex-direction: column;
+    align-items: center;
 }
 
 .tasklist__item-title {
@@ -23,4 +24,44 @@
 
 .tasklist__item-title h4 {
     margin: 0.4em 0;
+}
+
+.tasklist__item-task {
+    display: flex;
+    width: 90%;
+    height: 10%;
+    border: 1px solid black;
+    padding: 0 2em;
+    border-radius: 0.7em;
+    margin-top: 3em;
+    align-items: center;
+}
+
+.task__info {
+    width: 90%;
+    height: 100%;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid black;
+}
+
+.task__title {
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.task__date {
+    margin: 0.4em 0;
+}
+
+.task__options {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9%;
+}
+
+.task__edit {
+    margin: 0.7em 0;
 }
