@@ -35,6 +35,7 @@
     border-radius: 0.7em;
     margin-top: 3em;
     align-items: center;
+    box-shadow: 5px 10px 20px rgb(48, 45, 45);
 }
 
 .task__info {
@@ -65,3 +66,23 @@
 .task__edit {
     margin: 0.7em 0;
 }
+.task__status, .task__edit, .task__delete{
+    transition: all 0.2s;
+}
+.task__status:hover, .task__edit:hover, .task__delete:hover{
+    transform: scale(1.5);
+    transition: all 0.5s;
+}
+.task__edit:hover{
+    color: yellowgreen;
+}
+.task__delete:hover{
+    color: red;
+}
+.app__tasklist-planning .task__status:hover{
+    color: aqua;
+}
+.app__tasklist-uncompleted .task__status:hover{
+    color: green;
+}
+

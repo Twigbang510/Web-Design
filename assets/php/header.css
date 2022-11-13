@@ -3,24 +3,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    background-image: linear-gradient(to bottom right, #764BA2  , #667EEA);
-    height:10vh;
-    font-family: 'Noto Sans Limbu', sans-serif;
-    box-sizing: border-box;
 
-}
 li, a, button{
     font-weight: 500;
     text-decoration: none;
 }
 header{
     display: flex;
+    height: 10%;
+    font-family: 'Noto Sans Limbu', sans-serif;
     justify-content: space-between;
     align-items: center;
     font-size: 20px;
     padding: 10px 0px;
-    border-bottom: 2px solid red;
+    border-bottom: 1px solid black;
+    box-shadow: #0f0101;
 }
 
 
@@ -36,15 +33,15 @@ header{
     align-items: center;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: inset 0 5px 5px #781fdd,
-    0 -5px 10px #550cdd,
-    inset 0 -5px 5px #6c16ce,
-    0 10px 15px #6325d6;
+    box-shadow: inset 0 5px 5px #f7f0ff,
+    0 -5px 10px #a697c2,
+    inset 0 -5px 5px #a49fa8,
+    0 10px 15px #a7a2b1;
     transition: 1s;
-    color: #BEEBF1;
+    color: #0f0101;
 }
 .search i{
-    padding: 3px;
+    padding: 4px 0px 4px 4px;
 
 }
 .search input{
@@ -54,7 +51,7 @@ header{
     width: 100px;
     padding: 0 20px;
     transform: translate(-50px);
-    color: azure;
+    color: rgb(0, 0, 0);
 }
 .search:focus-within{
     width: 200px;
@@ -111,5 +108,5 @@ input:valid ~ i{
     transition: all 0.3s ease 0s;
 }
 .nav__link a:hover , li:hover{
-    color: #BEEBF1;
+    color: #0fdb2a;
 }

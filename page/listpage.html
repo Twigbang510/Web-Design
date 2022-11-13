@@ -6,36 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="listpage.css">
-    <!-- <link rel="stylesheet" href="../assets/php/header.css"> -->
-    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="../assets/php/header.css">
+    <!-- <link rel="stylesheet" href="./navbar.css"> -->
     <link rel="stylesheet" href="./sidebar.css">
     <link rel="stylesheet" href="./tasklist.css">
     <title>Document</title>
 </head>
 <body>
-    <navbar class="app__navbar">
-        <div class="navbar__searchbox">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" required minlength="1">
-            <!-- <i class="fa-solid fa-angle-right"></i> -->
+    <header>
+        <div class="box__search">
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" required minlength="1">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
         </div>
 
-        <div class="navbar__logo">
+        <div class="header__logo">
             <a href="/" class="logo">
                 <img src="/img/logo.jpg" alt="logo" >
             </a>
         </div>
-        <div class="navbar__content">
-            <ul class="navbar__content-item">
-                <li><i class="fa-solid fa-question"></i></li>
+        <nav>
+            <ul class="nav__link">
+                <li>Help <i class="fa-solid fa-question"></i></li>
                 <li><i class="fa-solid fa-bell"></i></li>
                 <li><i class="fa-solid fa-user"></i></li>
             </ul>
-        </div>
+        </nav>
 
-    </navbar>
+    </header>
     <div class="app__sidebar">
+        
         <button class="dropdown-btn">
+            <i class="fa-solid fa-list"></i>
             List 
             <i class="fa fa-caret-down"></i>
         </button>
@@ -43,14 +47,18 @@
             <a href="#">Project name</a>
             <a href="#">Testing</a>
         </div>
-        <button class="dropdown-btn">Calendar 
+        <button class="dropdown-btn">
+            <i class="fa-regular fa-calendar-days"></i>
+            Calendar 
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
             <a href="#">Project name</a>
             <a href="#">Testing</a>
         </div>
-        <button class="dropdown-btn">Analyze 
+        <button class="dropdown-btn">
+            <i class="fa-solid fa-chart-simple"></i>
+            Analyze 
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
@@ -58,8 +66,37 @@
             <a href="#">Testing</a>
         </div>
         <div class="sidebar__addtask">
-            +
-            New task
+            <i class="fa-solid fa-circle-plus"></i>
+            <a class="diglog_btn" href="#add_tasks">Add tasks</a>
+        </div>
+    </div>
+    <div class="dialog add_tasks overlay" id="add_tasks">
+        <div class="dialog__add__body">
+            <a class="dialog_close_btn" href="#">&times;</a>
+            <input type="text" class="task__name" placeholder="Please enter the task name">
+            <div class="tasks__select">
+                <label for="projects">Project Name</label>
+
+                <select name="projects" id="projects">
+                    <option value="volvo">Project Name</option>
+                    <option value="saab">Testing</option>
+                </select>   
+            </div>
+            <div class="task__date__start">
+                <label for="birthday">Start date:</label>
+                <input type="date" >
+                <input type="time" >
+            </div>
+            <div class="task__date__end">
+                <label for="birthday">End date:</label>
+                <input type="date" >
+                <input type="time" >
+            </div>
+            <div class="task__add__note">
+                <label for="">Note:</label>
+                <input type="text">
+            </div>
+            <button>Create</button>
         </div>
     </div>
     <div class="app__tasklist">
@@ -70,48 +107,48 @@
             <div class="tasklist__item-task">
                 <div class="task__info">
                     <div class="task__title">
-                        Task 1
+                        Have trip
                     </div>
                     <div class="task__date">
                         Start at: 23/03/27
                     </div>
                     <div class="task__note">
-                        Note: vudeptrai
+                        Note: buy car
                     </div>
                 </div>
                 <div class="task__options">
                     <div class="task__status">
-                        C
+                        <i class="fa-regular fa-circle-check"></i>
                     </div>
                     <div class="task__edit">
-                        A
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </div>
                     <div class="task__delete">
-                        C
+                        <i class="fa-solid fa-trash"></i>
                     </div>
                 </div>
             </div>
             <div class="tasklist__item-task">
                 <div class="task__info">
                     <div class="task__title">
-                        Task 2
+                        Do homework
                     </div>
                     <div class="task__date">
                         Start at: 27/06/27
                     </div>
                     <div class="task__note">
-                        Note: vudeptrai
+                        Note: do or not ?
                     </div>
                 </div>
                 <div class="task__options">
                     <div class="task__status">
-                        C
+                        <i class="fa-regular fa-circle-check"></i>
                     </div>
                     <div class="task__edit">
-                        A
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </div>
                     <div class="task__delete">
-                        C
+                        <i class="fa-solid fa-trash"></i>
                     </div>
                 </div>
             </div>
@@ -123,24 +160,24 @@
             <div class="tasklist__item-task">
                 <div class="task__info">
                     <div class="task__title">
-                        Task 1
+                        Buy house
                     </div>
                     <div class="task__date">
                         Deadline: 20:45 23/06/27
                     </div>
                     <div class="task__note">
-                        Note: vudeptrai
+                        Note: Make money
                     </div>
                 </div>
                 <div class="task__options">
                     <div class="task__status">
-                        L
+                        <i class="fa-regular fa-circle-check"></i>
                     </div>
                     <div class="task__edit">
-                        O
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </div>
                     <div class="task__delete">
-                        N
+                        <i class="fa-solid fa-trash"></i>
                     </div>
                 </div>
             </div>
@@ -152,24 +189,24 @@
             <div class="tasklist__item-task">
                 <div class="task__info">
                     <div class="task__title">
-                        Task 1
+                        Don't have anything
                     </div>
                     <div class="task__date">
                         Deadline: 20:45 23/06/27
                     </div>
                     <div class="task__note">
-                        Note: vudeptrai
+                        Note: alway done
                     </div>
                 </div>
                 <div class="task__options">
                     <div class="task__status">
-                        C
+                        <i class="fa-sharp fa-solid fa-circle-check"></i>
                     </div>
                     <div class="task__edit">
-                        A
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </div>
                     <div class="task__delete">
-                        C
+                        <i class="fa-solid fa-trash"></i>
                     </div>
                 </div>
             </div>
